@@ -1,0 +1,326 @@
+:root {
+    font-family: Arial;
+    --background-color: #f3f3f3ff;
+    --border-color: #d9d9d9;
+    --secondary-color: #434343;
+    --big-header: 22px;
+    --small-header: 20px;
+    --line-height: 1.5;
+}
+
+header {
+    background-color: var(--background-color);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+footer {
+    background-color: var(--background-color);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin-inline: auto;
+}
+
+a {
+    text-decoration: none;
+    margin-inline: 10px;
+}
+
+hr {
+    margin: 0;
+    border: 1px solid var(--border-color);
+}
+
+.logo {
+    font-size: var(--small-header);
+    width: 200px;
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+
+#Bottom {
+    text-align: left;
+    margin-left: 0px;
+}
+
+.navbar {
+    margin-bottom: -3px;
+}
+
+.navList {
+    font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    margin-right: 40px;
+}
+
+.socials {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    height: 100px;
+
+}
+
+.icons {
+    display: flex;
+    opacity: 0.3;
+}
+
+.copyright {
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction:column;
+    margin-left: 40px;
+    
+}
+
+.copyrightInfo {
+    font-size: 14px;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 20px;
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bannerImage {
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+.bannerText {
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.25);
+    line-height: var(--line-height);
+
+    position: absolute;
+    width: 22cqw;
+    font-size: 1.9cqw;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.about {
+    margin-top: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+    display: flex;
+}
+
+.aboutTitle {
+    display: grid;
+    grid-template-columns: 1fr 150px;
+    align-items: center;
+    width: 50%;
+    padding-right: 100px;
+    box-sizing: border-box;
+}
+
+.aboutTitle h2 {
+    margin: 0;
+    text-align: center;
+}
+
+.profilePic {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+.about hr {
+    margin-block: 20px;
+}
+
+.aboutText {
+    display: flex;
+    align-items: left;
+    margin-block: 20px;
+    width: 50%;
+    
+}
+
+.aboutText p {
+    color: var(--secondary-color);
+    font-size: 18px;
+    margin-inline: 50px;
+    line-height: var(--line-height);
+}
+
+.gallery {
+    margin-block: 10px;
+    background-color: var(--background-color);
+    width: 100%;
+}
+
+.gallery h2 {
+    margin-block: 35px;
+    margin-left: 30px;
+}
+
+.imageGridContainer {
+    display: flex;
+    justify-content: center;
+    margin-inline: 10px;
+    margin-bottom: 30px;
+}
+
+.imageGrid {
+    display: grid;
+    aspect-ratio: 2 / 1;
+    width: 99%;
+
+    grid-template-columns: 28.75fr 19.375fr 25.625fr 26.25fr;
+    grid-template-rows: 50% 50%;
+    gap: 0.8em;
+    grid-template-areas: 
+    "box-1 box-2 box-2 box-3"
+    "box-1 box-4 box-5 box-6";
+}
+
+.imageContainer {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid var(--border-color);
+}
+
+.imageContainer a {
+    margin: 0;
+}
+
+.imageContainer img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transform-origin: center;
+    transition: all 0.2s ease;
+}
+
+.imageContainer:hover img {
+    transform: scale(1.05);
+}
+
+.imageOverlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgb(0 0 0 / 0%);
+    transition: background-color 0.2s ease;
+}
+
+.imageContainer:hover .imageOverlay {
+    background-color: rgb(0 0 0 / 30%);
+}
+
+.imageOverlay h1 {
+    opacity: 0;
+    font-size: 24px;
+    color: white;
+    transition: opacity 0.2s ease;
+
+    margin-left: 15px;
+    margin-top: 30px;
+}
+
+.imageContainer:hover .imageOverlay h1 {
+    opacity: 1;
+}
+
+.imageOverlay p {
+    opacity: 0;
+    font-size: 22px;
+    color: white;
+    transition: opacity 0.2s ease;
+
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+.imageContainer:hover .imageOverlay p {
+    opacity: 1;
+}
+
+.seeMore {
+    display: flex;
+    background-color: #f3f3f3ff;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    line-height: 70px;
+    border: 1px solid var(--border-color);
+}
+
+.seeMore a {
+    color: rgb(180,180,180);
+    font-size: 32px;
+}
+
+.galleryInfo {
+    width: 100%;
+}
+
+.galleryInfo h1 {
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.galleryContainer {
+    width: 100%;
+
+}
+
+.galleryMonth {
+    margin-bottom: 150px;
+}
+
+.galleryMonth h2 {
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+
+.galleryGrid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1.6em 0.8em;
+}
+
+.galleryGrid .imageContainer {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.galleryGrid .imageContainer img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
